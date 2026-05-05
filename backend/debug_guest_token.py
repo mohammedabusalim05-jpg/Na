@@ -1,0 +1,26 @@
+from rest_framework_simplejwt.tokens import RefreshToken
+import uuid
+from datetime import timedelta
+
+print("Starting debug...")
+try:
+    print("Creating RefreshToken...")
+    refresh = RefreshToken()
+    print("RefreshToken created.")
+    
+    print("Setting user_id...")
+    refresh['user_id'] = str(uuid.uuid4())
+    print("user_id set.")
+
+    print("Setting is_guest...")
+    refresh['is_guest'] = True
+    print("is_guest set.")
+
+    print("Setting expiration...")
+    refresh.set_exp(lifetime=timedelta(minutes=30))
+    print("Expiration set.")
+
+    print(f"Access Token: {str(refresh.access_token)}")
+
+except Exception as e:
+    print(f"Error: {e}")

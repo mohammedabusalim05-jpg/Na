@@ -1,0 +1,43 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# React / Node
+node_modules/
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python / Django
+backend/venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+
+# Node / React
+node_modules/
+frontend/node_modules/
+dist/
+build/
+
+# Mac
+.DS_Store
+backend/db.sqlite3

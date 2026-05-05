@@ -1,0 +1,30 @@
+import { Outlet, Link } from "react-router-dom";
+
+export default function MainLayout() {
+return (
+<div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-black text-white">
+
+    {/* Navbar */}
+    <nav
+        className="w-full glass-card py-4 px-8 flex justify-between items-center backdrop-blur-xl bg-glass border border-white/20 rounded-xl">
+        <h1 className="text-2xl font-bold">Nakhwa</h1>
+
+        <div className="flex items-center gap-4">
+            <Link to="/admin" className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded-lg transition">
+            Admin Panel
+            </Link>
+
+            <Link to="/login"
+                className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-lg hover:bg-white/30 transition">
+            Login
+            </Link>
+        </div>
+    </nav>
+
+    {/* Pages appear here */}
+    <div className="p-6">
+        <Outlet />
+    </div>
+</div>
+);
+}
